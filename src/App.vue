@@ -1,11 +1,29 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div>
+    <router-view>
+      </router-view>
   </div>
+
+<!--    <nav class="navbar navbar-dark bg-dark">-->
+<!--          <div class="container-fluid">-->
+<!--            <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--              <router-view>-->
+<!--            <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+<!--              <li class="nav-item">-->
+<!--                <router-link to="/">Home</router-link>-->
+<!--              </li>-->
+<!--              <li class="nav-item">-->
+<!--                <router-link to="/about">About</router-link>-->
+<!--              </li>-->
+<!--              <li class="nav-item">-->
+<!--                <router-link to="/announcements">Announcements</router-link>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--              </router-view>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--    </nav>-->
+
 </template>
 
 <style>
@@ -29,4 +47,42 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: red;}
+#Announcements {background-color: green;}
+#Goods {background-color: blue;}
+#About {background-color: orange;}
 </style>
+
